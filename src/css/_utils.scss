@@ -1,0 +1,36 @@
+
+.super-underlined {
+    position: relative;
+}
+
+.super-underlined:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    z-index: -1;
+    background: #4e93e6;
+}
+
+.image-frame {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    z-index: -9;
+    height: 110%;
+    width: 104%;
+    border: 5px solid #4e93e6;
+    transform: scale(1.13) translate(10%, 0px);
+    left: 0;
+    right: 0;
+    margin-left: 8%;
+    margin-top: -8%;
+}
+
+.line-separator {
+    height: 1px;
+    @apply .bg-blue-400 .w-12 .mx-auto
+}
