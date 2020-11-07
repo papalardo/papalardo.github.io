@@ -58,8 +58,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -225,6 +224,14 @@
   }
   
   @media screen and (max-width:800px) {
+    .timeline__header .timeline__timeframe {
+      font-size: 0.8rem
+    }
+    
+    .timeline__header h5 {
+      font-size: 1.2rem;
+    }
+
     .s-about {
       padding-top: 16rem;
     }
@@ -255,7 +262,7 @@
     }
   
     .timeline__block {
-      padding-left: 4.4rem;
+      padding-left: 2rem;
     }
   
     .timeline__header h5 {

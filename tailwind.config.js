@@ -6,7 +6,8 @@ module.exports = {
     theme: {
       fontFamily: {
         serif: ['"Frank Ruhl Libre"', 'serif'],
-        sans: ['"Josefin Sans"', 'sans-serif']
+        // sans: ['"Josefin Sans"', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
       },
       extend: {
         colors: {

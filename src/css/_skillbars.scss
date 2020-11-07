@@ -24,12 +24,9 @@
     color: #FFF;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
 }
 
 .skill-bars li .progress {
-    background: red;
     background-image: linear-gradient(to right, #FFF, theme('colors.primary.400'));
     position: relative;
     height: 100%;

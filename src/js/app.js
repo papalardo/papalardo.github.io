@@ -14,14 +14,14 @@ new Typed('#typed', {
 /* ---------------------------------------------- /*
 * Parallax init
 /* ---------------------------------------------- */
-import Parallax from './parallax';
+import Parallax from 'parallax-js'
 new Parallax(document.getElementById('scene'))
 
 /* ---------------------------------------------- /*
 * Particles init
 /* ---------------------------------------------- */
-import Particles from './particles';
-import ParticlesConfig from './particles.config';
-window.onload = function() {
-	Particles.init(ParticlesConfig);
-};
+// import Particles from './particles';
+// import ParticlesConfig from './particles.config';
+// window.onload = function() {
+// 	Particles.init(ParticlesConfig);
+// };
