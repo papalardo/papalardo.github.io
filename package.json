@@ -13,6 +13,10 @@
     "build": "yarn parcel build src/*.html"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
+    "masonry-layout": "^4.2.2",
+    "minigrid": "^3.1.1",
+    "minimasonry": "^1.1.5",
     "parallax-js": "^3.1.0",
     "tailwindcss": "^1.9.6",
     "typed.js": "^2.0.11"

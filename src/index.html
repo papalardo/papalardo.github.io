@@ -61,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section class="work_and_education">
+    <section class="work_and_education recruiter-mode">
         <div class="container mx-auto py-16 px-4">
             <div class="w-full text-center">
                 <h2 class="tracking-wider text-lg md:text-3xl">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <section id="skills" class="bg-primary-300">
+    <section id="skills" class="bg-primary-300 recruiter-mode">
         <div class="container mx-auto pt-16 px-4 lg:px-10">
             <div class="w-full text-center">
                 <h2 class="tracking-wider text-3xl">
@@ -119,45 +119,52 @@
                 </h2>
                 <div class="line-separator"></div>
             </div>
-
-            <ul class="skill-bars grid grid-cols-1 md:grid-cols-2 gap-x-10 mb-0">
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong class="text-lg font-sans">PHP</strong>
-                </li>
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong class="text-lg font-sans">Laravel</strong>
-                </li>  
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong class="text-lg font-sans">VueJS</strong>
-                </li>
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong class="text-lg font-sans">HTML5</strong>
-                </li>
-                <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong class="text-lg font-sans">CSS3</strong>
-                </li>
-                <li>
-                    <div class="progress percent80"><span>80%</span></div>
-                    <strong class="text-lg font-sans">Git (VCS)</strong>
-                </li>   
-                <li>
-                    <div class="progress percent80"><span>80%</span></div>
-                    <strong class="text-lg font-sans">Git Flow</strong>
-                </li>   
-                <li>
-                    <div class="progress percent75"><span>75%</span></div>
-                    <strong class="text-lg font-sans">Wordpress</strong>
-                </li>   
-                <li>
-                    <div class="progress percent70"><span>70%</span></div>
-                    <strong class="text-lg font-sans">Docker</strong>
-                </li>
-            </ul>
+            <div class="skill-grid">
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/php.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/laravel.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/lumen.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/nodejs.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/flutter.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/html5.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/css3.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/js.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/graphql.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/vuejs.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/sass.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/jquery.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/github.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/docker.svg" alt="">
+                </div>
+                <div class="skill-icon">
+                    <img src="/images/icons-dev/postgresql.svg" alt="">
+                </div>
         </div>
     </section>
     <section id="freelancer">
@@ -168,7 +175,7 @@
                 </h2>
                 <div class="line-separator"></div>
             </div>
-            <button class="custom-btn">Me contrate</button>
+            <a class="custom-btn" href="#contact">Me contrate</a>
         </div>
     </section>
     <section id="contact">
@@ -218,7 +225,7 @@
                 </p>
 			</div><!-- .row -->
 		</div><!-- .container -->
-	</footer>
+    </footer>
   <script src="./js/app.js"></script>
 </body>
 </html>

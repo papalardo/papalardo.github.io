@@ -31,9 +31,17 @@ new Parallax(document.getElementById('scene'))
 /* ---------------------------------------------- */
 import { getVh } from './helpers'
 const heroSectionEl = document.getElementById('section-initial')
-console.log(heroSectionEl)
 const setHeightHeroSection = () => {
     heroSectionEl.style.height = getVh() + 'px'
 }
 
 setHeightHeroSection()
+
+const urlParams = new URLSearchParams(window.location.search);
+const mode = urlParams.get('mode') || 'customer';
+if(mode == 'recruiter') {
+    const elements = document.getElementsByClassName('recruiter-mode')
+    Array.from(elements).forEach(element => {
+        element.classList.remove('hidden')
+    });
+}

@@ -1,0 +1,20 @@
+.skill-grid {
+    @apply mx-auto py-10 grid grid-cols-3 gap-4 max-w-md;
+
+    @screen md {
+        @apply grid-cols-5;
+    }
+}
+
+.skill-icon {
+    @apply flex items-center p-5 justify-center overflow-hidden rounded-full shadow bg-white;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    @screen md {
+        @apply p-4
+    }
+}
