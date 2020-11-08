@@ -1,17 +1,11 @@
 export function throttle(n,l,t){var a,u,e,r=null,i=0;t||(t={});var o=function(){i=!1===t.leading?0:Date.now(),r=null,e=n.apply(a,u),r||(a=u=null)};return function(){var c=Date.now();i||!1!==t.leading||(i=c);var p=l-(c-i);return a=this,u=arguments,p<=0||p>l?(r&&(clearTimeout(r),r=null),i=c,e=n.apply(a,u),r||(a=u=null)):r||!1===t.trailing||(r=setTimeout(o,p)),e}}
 
 export const DOMReady = function(callback) {
-    if (document.readyState === "interactive" || document.readyState === "complete") {
-        callback();
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', callback());
-    } else if (document.attachEvent) {
-        document.attachEvent('onreadystatechange', function() {
-            if (document.readyState != 'loading') {
-                callback();
-            }
-        });
-    }
+    document.addEventListener('readystatechange', function(event) {
+        if (document.readyState === "complete") {
+            callback()
+        }
+    });
 }
 
 export const debounce = (func, time) => {

@@ -1,0 +1,190 @@
+/* ---------------------------------------------- /*
+*   3. Navigation
+/* ---------------------------------------------- */
+
+.hamburger {
+    position: absolute;
+    width: 2.3rem;
+    height: .13rem;
+    border-radius: 0;
+    background-color: white;
+    display: block;
+    margin: 0px;
+    left: 40px;
+    bottom: 60px;
+	transition: 400ms;
+}
+.hamburger:before {
+    position: absolute;
+    width: 1.3rem;
+    height: .13rem;
+    border-radius: 2px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: 400ms;
+    content: '';
+    backface-visibility: hidden;
+    transform: rotate(0deg) translateY(10px);
+    right: 0;
+}
+
+.hamburger:after {
+    position: absolute;
+    width: 2.3rem;
+    height: .13rem;
+    border-radius: 2px;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: 400ms;
+    content: '';
+    backface-visibility: hidden;
+    transform: rotate(0deg) translateY(-10px);
+}
+
+.hamburger-overlay {
+	box-shadow: 0 0 0 0 #1f1f20;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: .5s ease-in-out;
+    border-radius: 50%;
+}
+
+.hamburger-menu.open .hamburger-overlay {
+	box-shadow: 0 0 0 120vw rgba(31, 31, 32, 1), 0 0 0 120vh rgba(31,31,32,1);
+	opacity: 0.9
+	/*border-radius: 0;*/
+}
+
+.hamburger-menu {
+	position: fixed;
+	right: -100px;
+	top: -100px;
+	z-index: 100;
+	width: 200px;
+	height: 200px;
+	background-color: rgba(31,31,32,.9);
+	border-radius: 50% 50% 50% 50%;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	border: none;
+	outline: none !important;
+}
+
+.hamburger-menu.open .hamburger:before {
+  transform: rotate(45deg) translateY(0px);
+    width: 2.3rem;
+}
+
+.hamburger-menu.open .hamburger:after {
+  transform: rotate(-45deg) translateY(0px);
+}
+
+.hamburger-menu.open .hamburger {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.Menu-list {
+	font-size: 50px;
+	line-height: 1.2;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.Menu-list-item a {
+	color: transparent !important;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.Menu-list-item {
+	position: relative;
+	color: transparent;
+	cursor: pointer;
+}
+.Menu-list-item::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 49%;
+	left: -10%;
+	right: -10%;
+	height: 4px;
+	border-radius: 4px;
+	margin-top: -2px;
+	background: #4e93e6;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+	transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+	transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98), -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+	z-index: 1;
+}
+
+.menu-wrapper .Menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 50%;
+	margin: 0 auto;
+	z-index: 11111;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+
+.menu-wrapper.open .Menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.Mask {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	color: #4e93e6;
+	top: 0;
+	height: 49%;
+	transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+.Mask span {
+	display: block;
+}
+
+.Mask + .Mask {
+	top: 48.9%;
+	height: 51.1%;
+}
+.Mask + .Mask span {
+	-webkit-transform: translateY(-53%);
+	transform: translateY(-53%);
+}
+
+.Menu-list-item:hover .Mask,
+.Menu-list-item:active .Mask {
+	color: #FFF;
+	-webkit-transform: skewX(12deg) translateX(5px);
+	transform: skewX(12deg) translateX(5px);
+}
+.Menu-list-item:hover .Mask + .Mask,
+.Menu-list-item:active .Mask + .Mask {
+	-webkit-transform: skewX(12deg) translateX(-5px);
+	transform: skewX(12deg) translateX(-5px);
+}
+.Menu-list-item:hover::before,
+.Menu-list-item:active::before {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}

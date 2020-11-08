@@ -1,4 +1,6 @@
 import './form'
+import './menu'
+import './linkSmooth'
 
 /* ---------------------------------------------- /*
 * Typed init
@@ -32,7 +34,7 @@ new Parallax(document.getElementById('scene'))
 * Ajuste viewHeight inicial
 /* ---------------------------------------------- */
 import { getVh } from './helpers'
-const heroSectionEl = document.getElementById('section-initial')
+const heroSectionEl = document.getElementById('home')
 const setHeightHeroSection = () => {
     heroSectionEl.style.height = getVh() + 'px'
 }
