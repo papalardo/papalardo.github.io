@@ -7,7 +7,7 @@
 }
 
 .skill-icon {
-    @apply flex items-center p-5 justify-center overflow-hidden rounded-full shadow bg-white;
+    @apply flex items-center p-5 justify-center overflow-hidden rounded-full shadow border border-white;
 
     img {
         object-fit: contain;
