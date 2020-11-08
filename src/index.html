@@ -41,22 +41,39 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4">
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="http://cafebionico.b-on-nutricao.com.br" target="_blank">
+                        <img src="/images/portifolio/b-on-cafebionico.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="http://guia.abdi.com.br" target="_blank">
+                        <img src="/images/portifolio/abdi-guia.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="https://brasilmais.economia.gov.br" target="_blank">
+                        <img src="/images/portifolio/abdi-brasil-mais.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="http://abdi.com.br" target="_blank">
+                        <img src="/images/portifolio/abdi.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="http://startupindustria.com.br/" target="_blank">
+                        <img src="/images/portifolio/abdi-startup-industria.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
                 <div class="h-64">
-                    <img src="https://picsum.photos/200/300" class="w-full h-full object-cover" alt="">
+                    <a href="https://www.industria40.abdi.com.br" target="_blank">
+                        <img src="/images/portifolio/abdi-industria-40.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
+                </div>
+                <div class="h-64">
+                    <a href="http://provalab.abdi.com.br" target="_blank">
+                        <img src="/images/portifolio/abdi-provalab.jpg" class="w-full h-full object-cover" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -188,21 +205,23 @@
             </div>
 
             <div class="w-full lg:w-1/2 mx-auto mt-10">
-                <form action="">
+                <form id="my-form" action="https://formspree.io/f/mwkwbdvl" method="POST">
                     <div class="block w-full">
-                        <label class="sr-only" for="name">Nome</label>
-                        <input type="text" id="name" class="w-full bg-primary-300 border border-white outline-none px-4 py-1" name="name" placeholder="Name" required="">
+                        <label class="sr-only" for="name">Seu nome</label>
+                        <input type="text" id="name" class="w-full bg-primary-300 border border-white outline-none px-4 py-1" name="name" placeholder="Seu nome" required="">
                     </div>
                     <div class="block w-full mt-4">
-                        <label class="sr-only" for="name">Email</label>
-                        <input type="email" id="name" class="w-full bg-primary-300 border border-white outline-none px-4 py-1" name="name" placeholder="Email" required="">
+                        <label class="sr-only" for="name">Seu email</label>
+                        <input type="email" id="name" class="w-full bg-primary-300 border border-white outline-none px-4 py-1" name="name" placeholder="Seu e-mail" required="">
                     </div>
                     <div class="block w-full mt-4">
-                        <textarea class="w-full bg-primary-300 border border-white outline-none px-4 py-1" id="c_message" name="c_message" rows="7" placeholder="Sua mensagem" required=""></textarea>
+                        <label class="sr-only" for="message">Sua mensagem</label>
+                        <textarea class="w-full bg-primary-300 border border-white outline-none px-4 py-1" id="message" name="message" rows="7" placeholder="Sua mensagem" required=""></textarea>
                     </div>
-                    <button type="submit" class="btn btn-block custom-btn wow fadeInUp animated" data-wow-delay=".3s">
+                    <button type="submit" class="btn btn-block custom-btn wow fadeInUp animated" data-wow-delay=".3s" id="my-form-button">
                         Enviar mensagem
                     </button>
+                    <p id="my-form-status"></p>
                 </form>
             </div>
 		</div>
