@@ -1,6 +1,5 @@
-/* ---------------------------------------------- /*
-* Ham Menu 
-/* ---------------------------------------------- */
+import { mobileCheck } from './helpers'
+import Tilt from 'vanilla-tilt'
 
 let menuOpened = false;
 
@@ -26,12 +25,13 @@ menuHamburger.addEventListener('click', function(event) {
     menuOpened ? closeMenu() : openMenu();
 });
 
-import Tilt from 'vanilla-tilt'
 
-Tilt.init(document.querySelector('.ham-tilt'), {
-    glare: false,
-	perspective: 1000,
-    maxTilt: 50,
-	scale: 1.2,
-	easing: "cubic-bezier(.03,.98,.52,.99)",
-})
+if(! mobileCheck()) {
+    Tilt.init(document.querySelector('.ham-tilt'), {
+        glare: false,
+        perspective: 1000,
+        maxTilt: 50,
+        scale: 1.2,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+    })
+}
