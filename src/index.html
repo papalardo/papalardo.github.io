@@ -2,7 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/app.scss">
+
+        <!-- Stylesheet -->
+        <link rel="preload" as="style" href="./css/app.scss" onload="this.onload=null;this.rel='stylesheet'">
+
 
         <script>
             // Skip Google Speed Insights not critical content
@@ -25,7 +28,9 @@
             document.addEventListener('readystatechange', function(event) {
                 if (document.readyState === "complete") {
                     const body = document.getElementsByTagName('body')[0]
-                    body.style.display = null
+                    setTimeout(() => {
+                        body.style.display = null
+                    }, 200)
                 }
             });
         </script>

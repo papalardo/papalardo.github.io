@@ -4,6 +4,7 @@ import './linkSmooth'
 import './iphoneRequestPermissions.js'
 import './layout'
 import './typed'
+import './loadcss'
 
 /* ---------------------------------------------- /*
 * Particles init
