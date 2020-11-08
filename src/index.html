@@ -91,8 +91,23 @@
             </div>
             <div class="w-2/3 lg:w-4/12 px-4 px-0">
                 <div class="relative" id="scene" style="max-height: 430px;">
-                    <img data-depth="-0.5" data-src="/images/profile.jpg" alt="" class="w-full object-cover">
-                    <span data-depth="-1" class="image-frame"></span>
+                    <picture data-depth="-0.8">
+                        <source
+                          type="image/webp"
+                          data-srcset="/images/profile_400.webp 400w, 
+                            /images/profile_800.webp 800w"
+                          data-sizes="100w"
+                        />
+                        <img
+                          alt="A lazy image"
+                          class="lazy w-full object-cover"
+                          data-src="/images/placeholder.png"
+                          data-srcset="/images/profile_400.jpg 400w, 
+                            /images/profile_800.jpg 800w"
+                          data-sizes="100w"
+                        />
+                    </picture>
+                    <span data-depth="-1.4" class="image-frame"></span>
                 </div>
             </div>
             <canvas class="background absolute" width="1598" height="1144" style="width: 100%; height: 100%; z-index: -50;"></canvas>
@@ -108,37 +123,37 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4">
                     <div class="h-64">
                         <a href="http://cafebionico.b-on-nutricao.com.br" target="_blank">
-                            <img data-src="/images/portifolio/b-on-cafebionico.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/b-on-cafebionico.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="http://guia.abdi.com.br" target="_blank">
-                            <img data-src="/images/portifolio/abdi-guia.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-guia.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="https://brasilmais.economia.gov.br" target="_blank">
-                            <img data-src="/images/portifolio/abdi-brasil-mais.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-brasil-mais.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="http://abdi.com.br" target="_blank">
-                            <img data-src="/images/portifolio/abdi.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="http://startupindustria.com.br/" target="_blank">
-                            <img data-src="/images/portifolio/abdi-startup-industria.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-startup-industria.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="https://www.industria40.abdi.com.br" target="_blank">
-                            <img data-src="/images/portifolio/abdi-industria-40.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-industria-40.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                     <div class="h-64">
                         <a href="http://provalab.abdi.com.br" target="_blank">
-                            <img data-src="/images/portifolio/abdi-provalab.jpg" class="w-full h-full object-cover" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-provalab.jpg" class="w-full h-full object-cover" alt="">
                         </a>
                     </div>
                 </div>
@@ -205,91 +220,91 @@
                 <div class="skill-grid">
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/php.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/php.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">PHP</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/laravel.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/laravel.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">Laravel</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/lumen.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/lumen.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">Lumen</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/nodejs.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/nodejs.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">NodeJS</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/flutter.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/flutter.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">Flutter</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/html5.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/html5.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">HTML5</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/css3.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/css3.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">CSS</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/js.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/js.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">Javascript</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/graphql.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/graphql.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">GraphQL</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/vuejs.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/vuejs.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">VueJS</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/sass.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/sass.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">SASS</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/jquery.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/jquery.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">JQuery</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/github.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/github.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">GitHub</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/docker.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/docker.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">Docker</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="skill-icon">
-                            <img data-src="/images/icons-dev/postgresql.svg" alt="">
+                            <img src="/images/placeholder.png" data-src="/images/icons-dev/postgresql.svg" alt="">
                         </div>    
                         <span class="text-sm font-sans">PostgreSQL</span>
                     </div>
