@@ -23,6 +23,16 @@
                 }
                 document.head.appendChild(s);
             }
+
+            SkipGSI(function() {
+                pushScript('https://www.googletagmanager.com/gtag/js?id=G-2SGJ2915DG', { async: 'async' })
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-2SGJ2915DG');
+            })
         </script>
         <script>
             document.addEventListener('readystatechange', function(event) {
@@ -328,7 +338,7 @@
             </div>
         </section>
         <section id="contato">
-            <div class="container mx-auto py-16 px-4 px-4 lg:px-10">
+            <div class="container mx-auto py-16 px-4 lg:px-10">
                 <div class="w-full text-center">
                     <h2 class="tracking-wider text-3xl">
                         Contato

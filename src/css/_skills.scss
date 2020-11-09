@@ -1,5 +1,5 @@
 .skill-grid {
-    @apply mx-auto py-10 grid grid-cols-3 gap-4 max-w-md;
+    @apply mx-auto py-10 grid grid-cols-3 gap-4 max-w-xl;
 
     @screen md {
         @apply grid-cols-5;
