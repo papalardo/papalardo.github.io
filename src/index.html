@@ -105,7 +105,7 @@
                 </p>
             </div>
             <div class="w-2/3 lg:w-4/12 px-4 px-0">
-                <div class="relative" id="scene" style="max-height: 430px;">
+                <div class="relative parallax-scene" style="max-height: 430px;">
                     <picture data-depth="-0.8">
                         <source
                           type="image/webp"
@@ -135,105 +135,37 @@
                     </h2>
                     <div class="line-separator"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-10 px-4 mt-10 mr-6 md:pr-16">
-                    <div class="work">
-                        <a href="http://cafebionico.b-on-nutricao.com.br" target="_blank" class="frame">
-                            <h2 class="title">Café biônico</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/b-on-cafebionico.jpg" class="w-full h-full object-cover" alt="">
+                <div 
+                    class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 px-4 mt-10 mr-6 md:pr-16"
+                    x-data="vm.portfolio()"
+                    x-init="mounted()"    
+                >
+                    <template
+                        x-for="work in works"
+                    >
+                        <a x-bind:href="work.href" target="_blank" class="work">
+                            <div 
+                                class="parallax-scene-portfolio relative"
+                                style="padding-top: 56.25%;"
+                            >
+                                <h2 class="title" data-depth="0.3" x-text="work.title"></h2>
+                                <div
+                                    data-depth="-0.3"
+                                    class="filter-bg overflow-hidden w-full bg-cover h-full" 
+                                    :style="[
+                                        'background-image: url(%s)'.replace('%s', work.image)
+                                    ]"
+                                >
+                                </div>
+                                <div class="skills p-4" data-depth="0.3">
+                                    <template x-for="skill in work.skills">
+                                        <span x-text="skill"></span>
+                                    </template>
+                                </div>
+                                <span data-depth="-0.2" class="image-frame"></span>
+                            </div>
                         </a>
-                        <div class="skills">
-                            <span>laravel</span>
-                            <span>postgresql</span>
-                            <span>rdstation</span>
-                            <span>integration</span>
-                            <span>cms</span>
-                            <span>livewire</span>
-                            <span>alpinejs</span>
-                            <span>seo optimization</span>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <a href="http://guia.abdi.com.br" target="_blank" class="frame">
-                            <h2 class="title">Guia de instrumentos</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-guia.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>laravel</span>
-                            <span>vuejs</span>
-                            <span>postgresql</span>
-                            <span>api</span>
-                            <span>integration</span>
-                            <span>cms</span>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <a href="https://brasilmais.economia.gov.br" target="_blank" class="frame">
-                            <h2 class="title">Brasil Mais</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-brasil-mais.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>laravel</span>
-                            <span>modules</span>
-                            <span>postgresql</span>
-                            <span>api</span>
-                            <span>integration</span>
-                            <span>cms</span>
-                            <span>sso</span>
-                            <span>keycloak</span>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <a href="http://abdi.com.br" target="_blank" class="frame">
-                            <h2 class="title">ABDI Institucional</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>vuejs</span>
-                            <span>nuxtjs</span>
-                            <span>laravel</span>
-                            <span>postgresql</span>
-                            <span>api</span>
-                            <span>integration</span>
-                            <span>cms</span>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <a href="http://startupindustria.com.br" target="_blank" class="frame">
-                            <h2 class="title">Startup Industria</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-startup-industria.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>vuejs</span>
-                            <span>laravel</span>
-                            <span>postgresql</span>
-                            <span>pagebuilder</span>
-                            <span>cms</span>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <a href="https://www.industria40.abdi.com.br" target="_blank" class="frame">
-                            <h2 class="title">Indústria 4.0</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-industria-40.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>vuejs</span>
-                            <span>firebase</span>
-                            <span>firebase functions</span>
-                        </div>
-                    </div>
-                    
-                    <div class="work">
-                        <a href="http://provalab.abdi.com.br" target="_blank" class="frame">
-                            <h2 class="title">Provalab</h2>
-                            <img src="/images/placeholder.png" data-src="/images/portifolio/abdi-provalab.jpg">
-                        </a>
-                        <div class="skills">
-                            <span>vuejs</span>
-                            <span>laravel</span>
-                            <span>api</span>
-                            <span>cms</span>
-                        </div>
-                    </div>
+                    </template>
                 </div>
             </div>
         </section>
@@ -348,7 +280,9 @@
                 </div><!-- .row -->
             </div><!-- .container -->
         </footer>
-        
+
+        <canvas id="noise" class="noise" width="1920" height="922"></canvas>
+
         <script>
             window.lazyLoadOptions = { threshold: 0, elements_selector: '[data-src],[data-bg]' };
         </script>

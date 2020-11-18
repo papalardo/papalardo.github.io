@@ -1,9 +1,15 @@
 import Parallax from 'parallax-js'
 
+window.Parallax = Parallax;
+
 const element = document.getElementById('scene')
 
 export const init = () => {
-    new Parallax(element)
+    Array.from(document.getElementsByClassName('parallax-scene'))
+        .forEach(element => {
+            new Parallax(element)
+        })
+        
 }
 
 init()

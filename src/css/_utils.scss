@@ -32,5 +32,30 @@
 
 .line-separator {
     height: 1px;
-    @apply .bg-blue-400 .w-12 .mx-auto
+    @apply .bg-blue-400 .w-12 .mx-auto;
+}
+
+.noise {
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .2;
+}
+
+.filter-bg {
+    position: relative;
+}
+
+.filter-bg::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    @apply inset-0;
 }

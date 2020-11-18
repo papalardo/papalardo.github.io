@@ -5,6 +5,9 @@ import './iphoneRequestPermissions.js'
 import './layout'
 import './typed'
 import './loadcss'
+import './noise'
+import './alpine'
+
 
 /* ---------------------------------------------- /*
 * Particles init

@@ -14,6 +14,7 @@
     "build": "yarn parcel build src/*.html"
   },
   "dependencies": {
+    "alpinejs": "^2.7.3",
     "jquery": "^3.5.1",
     "masonry-layout": "^4.2.2",
     "minigrid": "^3.1.1",
@@ -26,7 +27,7 @@
     "vanilla-tilt": "^1.7.0"
   },
   "staticFiles": {
-      "staticPath": "public",
-      "watcherGlob": "**"
+    "staticPath": "public",
+    "watcherGlob": "**"
   }
 }
