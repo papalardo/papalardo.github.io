@@ -25,6 +25,9 @@
     height: 250px;
     object-fit: cover;
     position: relative;
+    @screen lg {
+        height: 300px;
+    }
 }
 
 #portfolio .frame img:before {
