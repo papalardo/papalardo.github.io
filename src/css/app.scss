@@ -4,8 +4,10 @@
 
 @tailwind utilities;
 
+@tailwind screens;
+
 @import 'https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900';
-@import 'https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap';
 
 @import './_utils';
@@ -13,7 +15,8 @@
 @import './_skillbars';
 @import './_button';
 @import './skills';
-@import './menu';
+@import './_portfolio';
+@import './_menu';
 
 body {
 	font: 400 14px/1.8 'Poppins', sans-serif;

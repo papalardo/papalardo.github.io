@@ -1,0 +1,55 @@
+
+#portfolio .work {
+    z-index: 0;
+}
+
+#portfolio .work .title {
+    z-index: 1;
+    @apply text-4xl leading-none font-bold;
+    @screen md {
+        @apply py-3;
+    }
+}
+
+#portfolio .frame {
+    position: relative;
+    display: block;
+    z-index: -1;
+}
+#portfolio .frame a {
+    display: block;
+}
+
+#portfolio .frame img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
+
+#portfolio .frame img:before {
+    @apply inset-0 absolute opacity-75 bg-primary-300;
+}
+
+#portfolio .frame:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    height: 90%;
+    width: 104%;
+    border: 5px solid #4e93e6;
+    left: 0;
+    right: 0;
+    margin-left: 6%;
+    z-index: -1;
+}
+
+#portfolio .work .skills span:before {
+    content: '#';
+}
+
+#portfolio .work .skills span {
+    text-decoration: underline;
+    margin-right: .3rem;
+}
