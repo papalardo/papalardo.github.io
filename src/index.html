@@ -5,7 +5,7 @@
         <title>Pablo Papalardo</title>
 
         <!-- Stylesheet -->
-        <link rel="preload" as="style" href="./css/app.scss" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" as="style" href="./css/app.css" onload="this.onload=null;this.rel='stylesheet'">
 
         <script>
             // Skip Google Speed Insights not critical content
@@ -71,12 +71,12 @@
                             <span class="Mask"><span>Serviços</span></span>
                         </a>
                     </li> -->
-                    <li class="Menu-list-item">
+                    <!-- <li class="Menu-list-item">
                         <a href="#skills">Skills
                             <span class="Mask"><span>Skills</span></span>
                             <span class="Mask"><span>Skills</span></span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="Menu-list-item">
                         <a href="#contato">Contato
                             <span class="Mask"><span>Contato</span></span>
@@ -274,11 +274,11 @@
                         <li><a href="https://www.linkedin.com/in/papalardo" data-wow-delay=".2s">Linkedin</a></li>
                     </ul>
 
-                    <p class="mt-2">
-                        © 2020 papalardo, Todos os direitos revervados.
+                    <p class="mt-2" x-data="{ year: new Date().getFullYear() }">
+                        © <span x-text="year"></span> papalardo, Todos os direitos revervados.
                     </p>
-                </div><!-- .row -->
-            </div><!-- .container -->
+                </div>
+            </div>
         </footer>
 
         <canvas id="noise" class="noise" width="1920" height="922"></canvas>

@@ -14,7 +14,7 @@
 @import './_timeline';
 @import './_skillbars';
 @import './_button';
-@import './skills';
+@import './_skills';
 @import './_portfolio';
 @import './_menu';
 
@@ -27,4 +27,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+	--recruiter-mode-display: none;
+}
+
+.recruiter-mode {
+	display: var(--recruiter-mode-display, none);
 }

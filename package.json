@@ -6,12 +6,11 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.5.0",
-    "postcss": "^8.1.6",
-    "sass": "^1.29.0"
+    "postcss": "^8.1.6"
   },
   "scripts": {
-    "dev": "yarn parcel src/*.html",
-    "build": "yarn parcel build src/*.html"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
   },
   "dependencies": {
     "alpinejs": "^2.7.3",

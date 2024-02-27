@@ -21,8 +21,5 @@ import './alpine'
 const urlParams = new URLSearchParams(window.location.search);
 const mode = urlParams.get('mode') || 'customer';
 if(mode == 'recruiter') {
-    const elements = document.getElementsByClassName('recruiter-mode')
-    Array.from(elements).forEach(element => {
-        element.classList.remove('hidden')
-    });
+    document.documentElement.style.setProperty('--recruiter-mode-display', 'block');
 }
